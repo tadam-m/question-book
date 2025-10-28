@@ -10,5 +10,6 @@
     width: 100%;
 }
 
-body {
+:root {
+    --ui-header-height: 64px;
 }

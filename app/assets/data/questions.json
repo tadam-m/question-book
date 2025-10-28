@@ -1,0 +1,102 @@
+ [
+    {
+      "id": 1,
+      "content": "What values are most important to me in life, and am I living in alignment with them?",
+      "category": "values"
+    },
+    {
+      "id": 2,
+      "content": "What would I do differently if I knew nobody would judge me?",
+      "category": "authenticity"
+    },
+    {
+      "id": 3,
+      "content": "What recurring patterns in my life might be holding me back from growth?",
+      "category": "self-awareness"
+    },
+    {
+      "id": 4,
+      "content": "When do I feel most truly myself, and what circumstances bring that out?",
+      "category": "authenticity"
+    },
+    {
+      "id": 5,
+      "content": "What fears have prevented me from pursuing what I truly want?",
+      "category": "fears"
+    },
+    {
+      "id": 6,
+      "content": "How have my biggest challenges shaped who I am today?",
+      "category": "growth"
+    },
+    {
+      "id": 7,
+      "content": "What does 'success' truly mean to me, beyond societal expectations?",
+      "category": "values"
+    },
+    {
+      "id": 8,
+      "content": "What aspects of myself do I struggle to accept, and why?",
+      "category": "self-acceptance"
+    },
+    {
+      "id": 9,
+      "content": "How do I typically respond to stress, and are there healthier ways to cope?",
+      "category": "self-awareness"
+    },
+    {
+      "id": 10,
+      "content": "What relationships in my life bring out the best version of me?",
+      "category": "relationships"
+    },
+    {
+      "id": 11,
+      "content": "What would I want to be remembered for at the end of my life?",
+      "category": "legacy"
+    },
+    {
+      "id": 12,
+      "content": "When do I feel most at peace, and how can I incorporate more of that into my daily life?",
+      "category": "well-being"
+    },
+    {
+      "id": 13,
+      "content": "What limiting beliefs about myself do I need to let go of?",
+      "category": "growth"
+    },
+    {
+      "id": 14,
+      "content": "How has my definition of happiness evolved over time?",
+      "category": "values"
+    },
+    {
+      "id": 15,
+      "content": "What parts of myself have I neglected that deserve attention?",
+      "category": "self-care"
+    },
+    {
+      "id": 16,
+      "content": "What conversations have I been avoiding that I need to have?",
+      "category": "communication"
+    },
+    {
+      "id": 17,
+      "content": "How do I balance taking care of others with taking care of myself?",
+      "category": "balance"
+    },
+    {
+      "id": 18,
+      "content": "What lessons have my failures taught me that success never could?",
+      "category": "growth"
+    },
+    {
+      "id": 19,
+      "content": "What does my inner critic sound like, and how can I be kinder to myself?",
+      "category": "self-compassion"
+    },
+    {
+      "id": 20,
+      "content": "If I had one year left to live, what would I change about how I'm living now?",
+      "category": "perspective"
+    }
+ ]

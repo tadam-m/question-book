@@ -9,11 +9,14 @@ export default defineNuxtConfig({
       meta: [{ name: 'robots', content: 'noindex, nofollow' }],
     },
   },
+  ssr: false,
 
   typescript: {
     typeCheck: true,
     strict: true,
   },
 
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@pinia/nuxt'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@pinia/nuxt', '@vueuse/nuxt'],
+
+  css: ['@/assets/style/main.css'],
 })
