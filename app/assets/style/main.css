@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+    --font-sans: 'DM Sans', sans-serif;
+}
+
+#__nuxt {
+    height: 100dvh;
+    width: 100%;
+}
+
+body {
+}
