@@ -1,0 +1,56 @@
+name: Deployment
+run-name: Deployment to VPS
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        type: environment
+        required: true
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Create .env file
+        run: |
+          touch .env
+          echo NUXT_BACK_CMS_BASE_URL=${{ secrets.BACK_CMS_BASE_URL }} >> .env
+          echo NUXT_BACK_FORM_BASE_URL=${{ secrets.BACK_FORM_BASE_URL }} >> .env
+          echo DOMAIN=${{ secrets.DOMAIN }} >> .env
+          echo ENVIRONMENT=${{ secrets.ENVIRONMENT }} >> .env
+          echo WEB_VERSION=sha-${GITHUB_SHA::8} >> .env
+
+      - name: Copy files to target server via scp
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          port: 56289
+          key: ${{ secrets.DEPLOY_KEY }}
+          source: './docker-compose.yml,./.env'
+          target: '~/${{ inputs.environment }}/'
+
+      - name: Remote docker compose pull+lauch via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          APPTOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ secrets.DEPLOY_USERNAME }}
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USERNAME }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: 56289
+          envs: APPTOKEN,USERNAME
+          script: |
+            echo $APPTOKEN | docker login ghcr.io -u $USERNAME --password-stdin
+            cd ~/${{ inputs.environment }}/
+            docker compose -f ./docker-compose.yml pull
+            docker compose -f ./docker-compose.yml up eva-adig-front -d

@@ -1,0 +1,17 @@
+networks:
+  question-book:
+  reverse_proxy_network:
+    external: true
+
+services:
+  question-book:
+    image: ghcr.io/tadam-m/question-book:${WEB_VERSION}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=reverse_proxy_network"
+      - "traefik.http.routers.question-book-${ENVIRONMENT}.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.question-book-${ENVIRONMENT}.entrypoints=websecure"
+      - "traefik.http.routers.question-book-${ENVIRONMENT}.tls.certresolver=default"
+    networks:
+      - question-book
+      - reverse_proxy_network
