@@ -1,0 +1,47 @@
+name: Deployment
+run-name: Deployment to VPS
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        type: environment
+        required: true
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+
+      - name: Copy files to target server via scp
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          port: 56289
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: './docker-compose.yml,./.env'
+          target: '~/${{ inputs.environment }}/'
+
+      - name: Remote docker compose pull+lauch via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          APPTOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ secrets.VPS_USER }}
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 56289
+          envs: APPTOKEN,USERNAME
+          script: |
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+            cd ~/${{ inputs.environment }}/
+            docker compose -f ./docker-compose.yml pull
+            docker compose -f ./docker-compose.yml up question-book -d
