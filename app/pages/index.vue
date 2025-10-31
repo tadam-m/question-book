@@ -36,6 +36,7 @@ onMounted(() => {
     </ClientOnly>
 
     <UContainer class="grow h-full flex flex-col gap-32 justify-center items-center">
+      <h1>Questions</h1>
       <transition mode="out-in" name="fade">
         <p :key="currentQuestion?.id" class="text-xl text-center">
           {{ currentQuestion?.content }}

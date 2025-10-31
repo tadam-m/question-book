@@ -1,0 +1,41 @@
+name: Deployment
+run-name: Deployment to VPS
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy'
+        type: choice
+        required: true
+        options:
+          - staging
+          - production
+        default: staging
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to ${{ github.event.inputs.environment }}
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
+
+            cd ~/question-book/${{ github.event.inputs.environment }}/
+            sed -i 's/WEB_VERSION=.*/WEB_VERSION=latest/g' .env
+
+            docker compose pull
+            docker compose up -d
+
+            echo "✅ Déploiement ${{ github.event.inputs.environment }} terminé"
+            docker ps --filter name=question-book
