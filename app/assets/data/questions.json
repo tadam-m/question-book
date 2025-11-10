@@ -1,102 +1,302 @@
- [
+[
+  {
+    "id": 1,
+    "content": "Quelles sont les valeurs les plus importantes pour moi dans la vie, et est-ce que je vis en accord avec elles ?",
+    "category": "psychology"
+  },
+  {
+    "id": 2,
+    "content": "Que ferais-je différemment si je savais que personne ne me jugerait ?",
+    "category": "psychology"
+  },
+  {
+    "id": 3,
+    "content": "Quels schémas récurrents dans ma vie pourraient m'empêcher de grandir ?",
+    "category": "psychology"
+  },
+  {
+    "id": 4,
+    "content": "Quand est-ce que je me sens le plus moi-même, et quelles circonstances font ressortir cela ?",
+    "category": "psychology"
+  },
+  {
+    "id": 5,
+    "content": "Quelles peurs m'ont empêché de poursuivre ce que je veux vraiment ?",
+    "category": "psychology"
+  },
+  {
+    "id": 6,
+    "content": "Comment mes plus grands défis ont-ils façonné la personne que je suis aujourd'hui ?",
+    "category": "psychology"
+  },
+  {
+    "id": 7,
+    "content": "Que signifie véritablement le 'succès' pour moi, au-delà des attentes de la société ?",
+    "category": "psychology"
+  },
+  {
+    "id": 8,
+    "content": "Quels aspects de moi-même ai-je du mal à accepter, et pourquoi ?",
+    "category": "psychology"
+  },
+  {
+    "id": 9,
+    "content": "Comment est-ce que je réponds typiquement au stress, et y a-t-il des moyens plus sains d'y faire face ?",
+    "category": "psychology"
+  },
+  {
+    "id": 10,
+    "content": "Quelles relations dans ma vie font ressortir la meilleure version de moi-même ?",
+    "category": "psychology"
+  },
+  {
+    "id": 11,
+    "content": "Pour quoi voudrais-je être remembered à la fin de ma vie ?",
+    "category": "psychology"
+  },
+  {
+    "id": 12,
+    "content": "Quand est-ce que je me sens le plus en paix, et comment puis-je intégrer davantage de cela dans ma vie quotidienne ?",
+    "category": "psychology"
+  },
+  {
+    "id": 13,
+    "content": "Quelles croyances limitantes sur moi-même dois-je abandonner ?",
+    "category": "psychology"
+  },
+  {
+    "id": 14,
+    "content": "Comment ma définition du bonheur a-t-elle évolué au fil du temps ?",
+    "category": "psychology"
+  },
+  {
+    "id": 15,
+    "content": "Quelles parties de moi-même ai-je négligées et qui méritent de l'attention ?",
+    "category": "psychology"
+  },
+  {
+    "id": 16,
+    "content": "Quelles conversations est-ce que j'évite et que je dois avoir ?",
+    "category": "psychology"
+  },
+  {
+    "id": 17,
+    "content": "Comment est-ce que j'équilibre le fait de prendre soin des autres et de prendre soin de moi-même ?",
+    "category": "psychology"
+  },
+  {
+    "id": 18,
+    "content": "Quelles leçons mes échecs m'ont-ils enseignées que le succès n'aurait jamais pu ?",
+    "category": "psychology"
+  },
+  {
+    "id": 19,
+    "content": "À quoi ressemble ma critique intérieure, et comment puis-je être plus indulgent envers moi-même ?",
+    "category": "psychology"
+  },
+  {
+    "id": 20,
+    "content": "Si il me restait un an à vivre, qu'est-ce que je changerais dans ma vie actuelle ?",
+    "category": "psychology"
+  },
     {
-      "id": 1,
-      "content": "What values are most important to me in life, and am I living in alignment with them?",
-      "category": "values"
+      "id": 21,
+      "content": "Pourquoi le pain est-il carré alors que la plupart des toasts sont ronds ?",
+      "category": "dumb"
     },
     {
-      "id": 2,
-      "content": "What would I do differently if I knew nobody would judge me?",
-      "category": "authenticity"
+      "id": 22,
+      "content": "Si les chips banane sont faites à base de banane, les chips de pommes de terre sont-elles faites à base de pomme ?",
+      "category": "dumb"
     },
     {
-      "id": 3,
-      "content": "What recurring patterns in my life might be holding me back from growth?",
-      "category": "self-awareness"
+      "id": 23,
+      "content": "Pourquoi dit-on 'au jour d'aujourd'hui' ? Ça ne fait pas un peu double emploi ?",
+      "category": "dumb"
     },
     {
-      "id": 4,
-      "content": "When do I feel most truly myself, and what circumstances bring that out?",
-      "category": "authenticity"
+      "id": 24,
+      "content": "Est-ce que les poissons ont soif ?",
+      "category": "dumb"
     },
     {
-      "id": 5,
-      "content": "What fears have prevented me from pursuing what I truly want?",
-      "category": "fears"
+      "id": 25,
+      "content": "Pourquoi y a-t-il un 'D' dans 'froid' mais pas dans 'glace' ?",
+      "category": "dumb"
     },
     {
-      "id": 6,
-      "content": "How have my biggest challenges shaped who I am today?",
-      "category": "growth"
+      "id": 26,
+      "content": "Si on éternue les yeux ouverts, est-ce qu'ils vont vraiment sortir de leurs orbites ?",
+      "category": "dumb"
     },
     {
-      "id": 7,
-      "content": "What does 'success' truly mean to me, beyond societal expectations?",
-      "category": "values"
+      "id": 27,
+      "content": "Pourquoi les heures de pointe durent-elles plus d'une heure ?",
+      "category": "dumb"
     },
     {
-      "id": 8,
-      "content": "What aspects of myself do I struggle to accept, and why?",
-      "category": "self-acceptance"
+      "id": 28,
+      "content": "Est-ce que les aveugles rêvent en images ?",
+      "category": "dumb"
     },
     {
-      "id": 9,
-      "content": "How do I typically respond to stress, and are there healthier ways to cope?",
-      "category": "self-awareness"
+      "id": 29,
+      "content": "Pourquoi appelle-t-on ça 'bâtiment' alors que c'est déjà construit ?",
+      "category": "dumb"
     },
     {
-      "id": 10,
-      "content": "What relationships in my life bring out the best version of me?",
-      "category": "relationships"
+      "id": 30,
+      "content": "Si on nourrit la pâte à pain avec de la levure, est-ce que le pain est vivant ?",
+      "category": "dumb"
     },
     {
-      "id": 11,
-      "content": "What would I want to be remembered for at the end of my life?",
-      "category": "legacy"
+      "id": 31,
+      "content": "Pourquoi les trous du fromage sont-ils en fait l'absence de fromage ?",
+      "category": "dumb"
     },
     {
-      "id": 12,
-      "content": "When do I feel most at peace, and how can I incorporate more of that into my daily life?",
-      "category": "well-being"
+      "id": 32,
+      "content": "Est-ce que les miroirs sans tain sont des miroirs ou des fenêtres ?",
+      "category": "dumb"
     },
     {
-      "id": 13,
-      "content": "What limiting beliefs about myself do I need to let go of?",
-      "category": "growth"
+      "id": 33,
+      "content": "Pourquoi dit-on 'nourriture pour chiens' mais 'nourriture pour chats' ? Pourquoi pas 'nourriture pour chien' ?",
+      "category": "dumb"
     },
     {
-      "id": 14,
-      "content": "How has my definition of happiness evolved over time?",
-      "category": "values"
+      "id": 34,
+      "content": "Si on télécharge une voiture, est-ce qu'on la reçoit par email ?",
+      "category": "dumb"
     },
     {
-      "id": 15,
-      "content": "What parts of myself have I neglected that deserve attention?",
-      "category": "self-care"
+      "id": 35,
+      "content": "Pourquoi les flocons de neige sont-ils tous uniques alors que personne ne prend le temps de les vérifier ?",
+      "category": "dumb"
     },
     {
-      "id": 16,
-      "content": "What conversations have I been avoiding that I need to have?",
-      "category": "communication"
+      "id": 36,
+      "content": "Est-ce que les plantes nous trouvent mignons quand on les arrose ?",
+      "category": "dumb"
     },
     {
-      "id": 17,
-      "content": "How do I balance taking care of others with taking care of myself?",
-      "category": "balance"
+      "id": 37,
+      "content": "Pourquoi le beurre de cacahuète n'a-t-il pas le goût du beurre ?",
+      "category": "dumb"
     },
     {
-      "id": 18,
-      "content": "What lessons have my failures taught me that success never could?",
-      "category": "growth"
+      "id": 38,
+      "content": "Si le fromage fondu est du fromage liquide, pourquoi on ne peut pas en boire ?",
+      "category": "dumb"
     },
     {
-      "id": 19,
-      "content": "What does my inner critic sound like, and how can I be kinder to myself?",
-      "category": "self-compassion"
+      "id": 39,
+      "content": "Pourquoi les autruches mettent-elles leur tête dans le sable si elles ne veulent pas être vues ? Tout leur corps est encore visible !",
+      "category": "dumb"
     },
     {
-      "id": 20,
-      "content": "If I had one year left to live, what would I change about how I'm living now?",
-      "category": "perspective"
+      "id": 40,
+      "content": "Est-ce que les nuages pèsent lourd ? Et si oui, pourquoi ne tombent-ils pas ?",
+      "category": "dumb"
+    },
+    {
+      "id": 41,
+      "content": "Si un arbre tombe dans une forêt et que personne n'est là pour l'entendre, produit-il un son ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 42,
+      "content": "Qu'est-ce qui donne un sens à la vie ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 43,
+      "content": "L'homme est-il fondamentalement bon ou mauvais par nature ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 44,
+      "content": "Le libre arbitre existe-t-il vraiment, ou ne sommes-nous que le produit de nos déterminismes ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 45,
+      "content": "Qu'est-ce que la conscience, et comment émerge-t-elle de la matière ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 46,
+      "content": "Y a-t-il une réalité objective, ou tout est-il subjectif ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 47,
+      "content": "Qu'est-ce que le temps ? Existe-t-il indépendamment de notre perception ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 48,
+      "content": "La beauté existe-t-elle en soi, ou est-elle toujours dans l'œil de celui qui regarde ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 49,
+      "content": "Qu'est-ce qui constitue l'identité personnelle ? Sommes-nous la même personne à travers le temps ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 50,
+      "content": "Une action est-elle morale si elle procure du bonheur mais cause du tort à certains ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 51,
+      "content": "La quête du bonheur est-elle le but ultime de l'existence humaine ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 52,
+      "content": "Qu'est-ce que la vérité, et comment pouvons-nous être certains de quoi que ce soit ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 53,
+      "content": "L'univers a-t-il un but ou une finalité ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 54,
+      "content": "Qu'est-ce qui distingue un être humain d'une intelligence artificielle avancée ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 55,
+      "content": "La justice existe-t-elle en dehors des lois créées par l'homme ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 56,
+      "content": "Faut-il préférer le bonheur dans l'ignorance ou la vérité dans la souffrance ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 57,
+      "content": "L'art a-t-il une fonction, ou doit-il exister pour lui-même ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 58,
+      "content": "Qu'est-ce que la mort nous apprend sur la vie ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 59,
+      "content": "Peut-on vraiment connaître l'esprit d'autrui, ou sommes-nous condamnés à la solitude de notre propre conscience ?",
+      "category": "philosophy"
+    },
+    {
+      "id": 60,
+      "content": "Y a-t-il des limites à ce que la science peut expliquer ?",
+      "category": "philosophy"
     }
- ]
+]

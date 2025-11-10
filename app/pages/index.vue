@@ -1,8 +1,9 @@
 <script lang="ts" setup>
 import { useQuestionStore } from '~/stores/questions'
+import type { Category } from '~/types/questions'
 
 const questionStore = useQuestionStore()
-const { currentQuestion } = storeToRefs(questionStore)
+const { currentQuestion, categories } = storeToRefs(questionStore)
 
 const colorMode = useColorMode()
 const isDark = computed({
@@ -14,29 +15,42 @@ const isDark = computed({
   },
 })
 
+const selectCategory = (category: Category) => {
+  questionStore.addCategoryFilter(category)
+}
+
 onMounted(() => {
   questionStore.initializeStore()
 })
 </script>
 
 <template>
-  <div class="h-full">
-    <ClientOnly v-if="!colorMode?.forced">
-      <UButton
-        :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
-        class="absolute left-0"
-        color="neutral"
-        variant="ghost"
-        @click="isDark = !isDark"
-      />
+  <div class="h-full max-h-screen flex flex-col">
+    <div class="w-full flex justify-between items-center gap-4 p-4">
+      <ClientOnly v-if="!colorMode?.forced">
+        <UButton
+          :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
+          color="neutral"
+          variant="ghost"
+          @click="isDark = !isDark"
+        />
 
-      <template #fallback>
-        <div class="size-8" />
-      </template>
-    </ClientOnly>
+        <template #fallback>
+          <div class="size-8" />
+        </template>
+      </ClientOnly>
+
+      <UDrawer :overlay="false" placement="right">
+        <UButton class="text-center" color="neutral" label="Styles" size="xl" variant="ghost" />
+        <template #content>
+          <div class="h-48 m-4">
+            <CategoryPicker :selected-categories="categories" @select="selectCategory" />
+          </div>
+        </template>
+      </UDrawer>
+    </div>
 
     <UContainer class="grow h-full flex flex-col gap-32 justify-center items-center">
-      <h1>Questions</h1>
       <transition mode="out-in" name="fade">
         <p :key="currentQuestion?.id" class="text-xl text-center">
           {{ currentQuestion?.content }}
