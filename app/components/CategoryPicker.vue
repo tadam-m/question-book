@@ -14,22 +14,26 @@ const isCategorySelected = (category: Category) => {
 
 <template>
   <div class="h-full flex flex-row gap-8 items-center overflow-x-auto px-2">
-    <UCard
+    <div
       v-for="category in QUESTION_CATEGORIES"
       :key="category.name"
       :class="{
-        'outline-2 outline-primary outline': isCategorySelected(category.category),
+        'outline-2': isCategorySelected(category.category),
       }"
-      :ui="{ body: 'p-0 sm:p-0' }"
-      class="cursor-pointer min-w-48 transition-all duration-200"
+      class="rounded-md overflow-hidden shadow-xl relative min-w-[200px]"
       @click="$emit('select', category.category)"
     >
-      <div class="h-24 w-full bg-black"></div>
-      <template #footer>
-        <div class="h-8">
-          <p class="text-md text-black dark:text-white">{{ category.name }}</p>
-        </div>
-      </template>
-    </UCard>
+      <NuxtImg
+        :src="`/images/${category.src}`"
+        alt="Background image"
+        loading="lazy"
+        sizes="sm:200px md:220px lg:220px"
+      />
+      <div
+        class="absolute top-1/2 left-1/2 -translate-1/2 rounded-full w-3/4 h-3/4 flex items-center justify-center p-2"
+      >
+        <p class="text-center text-lg font-bold">{{ category.name }}</p>
+      </div>
+    </div>
   </div>
 </template>
